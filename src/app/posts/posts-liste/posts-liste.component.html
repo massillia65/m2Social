@@ -1,0 +1,6 @@
+
+<ul>
+  <li *ngFor="let postBoucle of posts">
+    <a [routerLink]="[postBoucle.id]">Post Numéro {{postBoucle.id}} </a>
+  </li>
+</ul>

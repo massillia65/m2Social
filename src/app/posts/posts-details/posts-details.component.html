@@ -1,0 +1,6 @@
+Utilisateur id : {{post.id}}<br>
+Timestamp : {{post.timestamp * 1000 | date}}<br>
+Contenu : {{post.content}}<br>
+<span *ngIf=post.img>
+  <img src="{{post.img}}" width="200" height="200"/>
+</span>
