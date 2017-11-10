@@ -1,4 +1,4 @@
-Utilisateur id : {{post.id}}<br>
+Utilisateur id : {{post.userId}} <a [routerLink]="['/posts/listeUsers/'+post.userId]">(voir Utilisateur)</a><br>
 Timestamp : {{post.timestamp * 1000 | date}}<br>
 Contenu : {{post.content}}<br>
 <span *ngIf=post.img>

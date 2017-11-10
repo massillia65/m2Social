@@ -3,5 +3,6 @@ export class Post {
   content: string;
   img?: string;
   timestamp?: number;
+  userId: number;
 }
 
