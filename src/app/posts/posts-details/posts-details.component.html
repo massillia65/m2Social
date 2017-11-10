@@ -1,6 +1,16 @@
 Utilisateur id : {{post.userId}} <a [routerLink]="['/posts/listeUsers/'+post.userId]">(voir Utilisateur)</a><br>
-Timestamp : {{post.timestamp * 1000 | date}}<br>
+Date : {{post.timestamp * 1000 | date}}<br>
 Contenu : {{post.content}}<br>
 <span *ngIf=post.img>
   <img src="{{post.img}}" width="200" height="200"/>
-</span>
+</span><br>
+<br>
+<div *ngIf=comments>
+  Les commentaire : <br>
+  <ul>
+    <li *ngFor="let commentBoucle of comments">
+      Commentaire numéro : {{commentBoucle.content}}<br>
+      Date : {{commentBoucle.timestamp * 1000 | date}}
+    </li>
+  </ul>
+</div>
